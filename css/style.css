@@ -15,17 +15,33 @@ body {
   font-style: normal;
   color: var(--main-font-color);
   letter-spacing: 0.03em;
-  width: 1600px;
-  
+  margin: 0 auto;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto; 
+  padding: 0 15px;
+}
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .list{
   list-style: none;
+  padding-left: 0;
+  
 }
 
 .header{
+  
    /* height: 80px; */
   border-bottom: var(--header-border);
-
+  
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation {
@@ -33,6 +49,8 @@ body {
   font-size: 14px;
   line-height: 1.172;
   letter-spacing: 0.02em;
+  display: flex;
+   
 }
 .logo {
   color: #000;
@@ -41,6 +59,13 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.1738;
+
+}
+.header .logo{
+   padding-top: 24px;
+  padding-bottom: 25px;
+  display: inline-block;
+  margin-right: 94px;
 }
 .logo>span{
  color: var(--accent-color);
@@ -49,8 +74,30 @@ body {
 .contacts {
   text-decoration: none;
 }
-.nav-link {
+.nav-link,
+.header .contacts {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: inline-block;
+}
+.nav-list,
+.header .contact-list {
+  margin: 0;
+
+  display: flex;
+}
+
+.nav-list-links {
+  
+  margin-right: 50px;
+}
+
+.nav-link{
   color: #000;
+}
+.header .contact-list-item {
+  display: inline-block;
+  margin-left: 50px;
 }
 .contacts {
   color: inherit;
@@ -73,6 +120,9 @@ body {
   
 .hero-one {
   background-color: var(--hero-background);
+   padding-top: 200px;
+  padding-bottom: 200px;
+
 }
 .heading {
   color: var(--white);
@@ -81,6 +131,9 @@ body {
   line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+   text-align: center;
+  width: 694px;
+  margin: 0 auto 30px;
 }
 .order {
   border: none;
@@ -93,57 +146,115 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
+   display: block;
+  margin: 0 auto;
 }
-.list{
-  list-style: none;
+.advantages-list {
+  display: flex;
 }
+.list-style{
+  width: 270px;
+}
+.advantages-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+
 .privilege{
   color: var(--black);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428;
   text-transform: uppercase;
+    margin-top: 0;
+  margin-bottom: 10px;
   
   
 }
 .idea{
   font-size: 14px;
   line-height: 1.714;
+  margin: 0;
+}
+.s3 {
+  padding-top: 0;
 }
 .section-heading {
   color: var(--black);
   font-size: 36px;
   line-height: 1.166;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 0;
 }
+.work-list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.work-type-item{
+   display: inline-block;
+}
+.work-list li:not(:last-child) {
+  margin-right: 30px;
+}
+.s4{
+  background-color: #f5f4fa;
+}
+.team-list {
+  display: flex;
+}
+
 .team {
   background-color: var(--white);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   width: 270px;
-  height: 368px;
   text-align: center;
+  display: inline-block;
 }
+.team-list li:not(:last-child) {
+  margin-right: 30px;
+}
+.team-div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .initials {
   color: var(--black);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1875;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 .position {
   font-size: 16px;
   line-height: 1.1875;
+    margin-top: 0;
+  margin-bottom: 0;
 }
 .basement {
   background-color: #2f303a;
   font-size: 14px;
   line-height: 1.714;
+   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .basement .logo {
   color: var(--white);
+   display: block;
+  margin-bottom: 20px;
 }
 .basement .contacts {
   color: var(--footer-contacts);
+  margin: 0;
+  display: block;
+}
+.footer .contact li:not(:last-child) {
+  margin-bottom: 9px;
 }
 .basement .contacts:focus,
 .basement .contacts:hover {
@@ -152,8 +263,19 @@ body {
 .address {
   color: var(--white);
   font-style: normal;
+   margin-bottom: 9px;
 }
 /* PORTFOLIO STYLES*/
+.button-list{
+   display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.button-list li:not(:last-child) {
+  margin-right: 8px;
+}
+
 
 .button-link{
   font-family: inherit;
@@ -164,24 +286,40 @@ body {
   background-color: #f5f4fa;
   border: none;
   border-radius: 4px;
+  padding: 6px 22px;
 }
 .button-link:focus,
 .button-link:hover {
   background-color: var(--accent-color);
   color: var(--white);
 }
+.project-list{
+   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-left: -30px;
+  margin-top: -30px;
+}
 .team {
   width: 370px;
   border: var(--portf-tile-border);
+   margin-left: 30px;
+  margin-top: 30px;
+}
+.web-name{
+  padding: 20px 24px;
 }
 .name-product {
   color: var(--black);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin: 0;
+  margin-bottom: 4px;
 }
 .project-type {
   font-size: 16px;
   line-height: 1.875;
+  margin: 0;
 }
 
